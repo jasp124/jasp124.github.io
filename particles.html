@@ -1,8 +1,76 @@
-<!DOCTYPE html>
-<html>
-    <meta content="width=device-width, initial-scale=1.0">
-    <header>
-        <a href="completed projects.html" class="back-button">Back</a>
-    </header>
+div class="sim-layout">
+	<div class="sim-side-panel">
+		<table>
+			<tr>
+				<td><div class="sim-text">Number of Particles</div></td>
+				<td><input id="total" type="text" class="sim-input-text" value="75"></td>
+				<td><button id="btn_total" class="sim-button" onclick="applySettings()">Apply</button></td>
+			</tr>
+			<tr>
+				<td><div class="sim-text">Particle Color</div>
+				<td><select id="color" class="sim-ddl">
+					<option value="whitesmoke">White</option>
+					<option value="fuchsia">Fuchsia</option>
+					<option value="yellow">Yellow</option>
+					<option value="lightgreen">Green</option>
+					<option value="blue">Blue</option>
+					<option value="red">Red</option>
+					</select></td>
+				<td><button id="btn_color" class="sim-button" onclick="applySettings()">Apply</button></td>
+			</tr>
+			<tr>
+				<td><div class="sim-text">Line Color</div></td>
+				<td><select id="line_color" class="sim-ddl">
+					<option value="white">White</option>
+					<option value="blue">Blue</option>
+					<option value="red">Red</option>
+					<option value="lightgreen">Green</option>
+					<option value="red">Red</option>
+					<option value="yellow">Yellow</option>
+					<option value="fuchsia">Fuchsia</option>
+					</select></td>
+				<td><button id="btn_line_color" class="sim-button" onclick="applySettings()">Apply</button>
+			</tr>
+			<tr>
+				<td><div class="sim-text">Line Width</div></td>
+				<td><input id="line_width" type="range" min="0" max="5" step="1" value="2" list="ticks_line_width" onchange="applySettings()"></td>
+				<td><label id="line_width_display" for="line_width" class="sim-text">2</label></td>
+			</tr>
+			<tr>
+				<td><div class="sim-text">Line Distance</div></td>
+				<td><input id="distance" type="range" min="0" max="400" value="150" step="1" list="ticks-distance" onchange="applySettings()"></td>
+				<td><label id="distance_display" for="distance" class="sim-text">150</label></td>
+			</tr>
+			<tr>
+				<td><div class="sim-text">Background Color</div></td>
+				<td><select id="background_color" class="sim-ddl">
+					<option value="black">Black</option>
+					<option value="gray">Gray</option>
+					<option value="whitesmoke">White</option>
+					<option value="blue">Blue</option>
+					<option value="yellow">Yellow</option>
+					<option value="fuchsia">Fuchsia</option>
+					</select></td>
+				<td><button id="btn_background" class="sim-button" onclick="applySettings()">Apply</button></td>
+			</tr>
+		</table>
+		<datalist id="ticks-distance">
+			<option value="0"></option>
+			<option value="100"></option>
+			<option value="200"></option>
+			<option value="300"></option>
+			<option value="400"></option>
+		</datalist>
+		<datalist id="ticks_line_width">
+			<option value="0"></option>
+			<option value="1"></option>
+			<option value="2"></option>
+			<option value="3"></option>
+			<option value="4"></option>
+			<option value="5"></option>
+		</datalist>
+	</div>
+	<canvas id="canvas" height="850" width="950" class="simple-canvas"></canvas>
     <script src="Particles.js"></script>
-</html>
+    <link href="Particles.css" rel="stylesheet">
+</div>
