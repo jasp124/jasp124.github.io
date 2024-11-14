@@ -2,3 +2,6 @@ This is a personal projects which contains my portpholio. The website was made u
 
 Currently the file Named index.html has the same code as home.html. I would need to remove Home.html and do some slght editing to the names of files within the code
 but that will happen when I extend the website in the future
+
+Plan:
+![image](https://github.com/user-attachments/assets/55bd7664-9b43-4886-bfe0-97700b5bc196)
